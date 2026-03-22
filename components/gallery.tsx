@@ -11,7 +11,7 @@ const galleryImages = [
   { src: "/images/hero-plumbing.jpg", alt: "Water tank system" },
   { src: "/images/gallery-4.jpg", alt: "Tile flooring project" },
   { src: "/images/service-plumbing.JPEG", alt: "Plumbing installation" },
-  { src: "/images/service-borehole.jpg", alt: "Borehole drilling" },
+  // { src: "/images/service-borehole.jpg", alt: "Borehole drilling" },
 ];
 
 const galleryOpps = [
@@ -20,7 +20,7 @@ const galleryOpps = [
   { src: "/images/service-tank.jpg", alt: "Water tank system" },
   { src: "/images/service-tiling.jpg", alt: "Tile flooring project" },
   { src: "/images/gallery-plumbAfter.JPEG", alt: "Plumbing installation" },
-  { src: "/images/service-borehole.jpg", alt: "Borehole drilling" },
+  // { src: "/images/service-borehole.jpg", alt: "Borehole drilling" },
 ];
 
 export function Gallery() {

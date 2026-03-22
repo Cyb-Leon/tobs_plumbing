@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { ArrowUpRight, Phone, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { LogoIcon } from './logo'
 
 export function Hero() {
   const [mounted, setMounted] = useState(false)
@@ -16,20 +17,10 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
       {/* Background Video */}
-      <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/images/hero-plumbing.jpg"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/5974567/5974567-uhd_2560_1440_25fps.mp4"
-            type="video/mp4"
-          />
-        </video>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/images/service-plumbing.JPEG)' }}
+      >
         {/* Light gradient overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-white/30" />
       </div>
@@ -52,7 +43,7 @@ export function Hero() {
             className={`transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
           >
-            <p className="text-2xl tracking-[0.3em] text-secondary mb-4 uppercase font-bold">
+            <p className="text-2xl tracking-[0.3em] text-accent mb-4 uppercase font-bold">
               Plumbing & Projects
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-foreground">
@@ -73,7 +64,7 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:+27716432514" >
+              {/* <a href="tel:+27716432514" >
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 group"
@@ -82,7 +73,7 @@ export function Hero() {
                   Call Now
                   <ArrowUpRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Button>
-              </a>
+              </a> */}
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                 <Button
                   size="lg"
@@ -119,7 +110,9 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <div className="w-px h-12 bg-gradient-to-b from-transparent via-secondary to-transparent animate-pulse" />
+        {/* <div className="w-px h-12 bg-gradient-to-b from-transparent via-secondary to-transparent animate-pulse" /> */}
+                    <LogoIcon className="h-16 w-16 animate-pulse" />
+        
       </div>
     </section>
   )

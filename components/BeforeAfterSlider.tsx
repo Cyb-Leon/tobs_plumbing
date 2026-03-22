@@ -37,7 +37,7 @@ export default function BeforeAfterSlider({ beforeImage, afterImage, altText }: 
       <img
         src={beforeImage}
         alt={`${altText} Before`}
-        className="h-full w-full object-cover"
+        className="h-full w-fullobject-cover"
       />
       {/* Slider Handle */}
       <div

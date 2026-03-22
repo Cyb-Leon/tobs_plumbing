@@ -32,13 +32,13 @@ const services = [
     image: '/images/service-tank.jpg',
     color: 'bg-accent',
   },
-  {
-    number: '05',
-    title: 'Boreholes',
-    description: 'Drilling and installation',
-    image: '/images/service-borehole.jpg',
-    color: 'bg-secondary',
-  },
+  // {
+  //   number: '05',
+  //   title: 'Boreholes',
+  //   description: 'Drilling and installation',
+  //   image: '/images/service-borehole.jpg',
+  //   color: 'bg-secondary',
+  // },
 ]
 
 export function Services() {

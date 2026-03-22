@@ -17,7 +17,7 @@ export default function Home() {
       <Services />
       <WhyUs />
       <Gallery />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTASection />
       <Contact />
       <Footer />
