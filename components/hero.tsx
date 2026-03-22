@@ -19,7 +19,7 @@ export function Hero() {
       {/* Background Video */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/images/service-plumbing.JPEG)' }}
+        style={{ backgroundImage: 'url(/images/gallery-1.jpg)' }}
       >
         {/* Light gradient overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-white/30" />
@@ -36,21 +36,22 @@ export function Hero() {
       </div> */}
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pb-16 mb-16 md:pb-24 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 pb-16 mb-12 md:pb-24 w-full">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-end">
           {/* Left Column */}
           <div
             className={`transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
-          >
-            <p className="text-2xl tracking-[0.3em] text-accent mb-4 uppercase font-bold">
+          > 
+             <LogoIcon className="h-22 w-22  mb-4 text-primary" />
+            <p className="text-2xl tracking-[0.3em] text-secondary mb-2 uppercase font-bold">
               Plumbing & Projects
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-foreground">
+            {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-foreground">
               Reliable Flow.
               <br />
               <span className="font-serif italic text-primary">Solid Foundations.</span>
-            </h2>
+            </h2> */}
           </div>
 
           {/* Right Column */}

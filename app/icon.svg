@@ -1,25 +1,42 @@
-<svg
-  viewBox="0 0 32 32"
-  xmlns="http://www.w3.org/2000/svg"
-  fill="none"
->
-  {/* Center droplet (main) */}
-  <path
-    d="M16 4C16 4 11 11 11 15C11 18.866 14.134 22 18 22C21.866 22 25 18.866 25 15C25 11 16 4 16 4Z"
-    fill="#1e40af"
-  />
+    <svg
+      viewBox="0 0 80 80"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g transform="translate(0, 80) scale(1,-1)">
+        {/* Top droplet */}
+        <path
+          d="M40 6C40 6 34 14 34 18C34 21.3137 36.6863 24 40 24C43.3137 24 46 21.3137 46 18C46 14 40 6 40 6Z"
+          fill="#1e40af"
+        >      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 0; 0 -2; 0 0"
+        dur="2s"
+        repeatCount="indefinite"
+      />
+      <animateTransform
+        attributeName="transform"
+        type="scale"
+        values="1; 1.05; 1"
+        dur="2s"
+        repeatCount="indefinite"
+        additive="sum"
+      />
+           </path>
 
-  {/* Left droplet */}
-  <path
-    d="M7 14C7 14 5 18 5 20C5 22.209 6.791 24 9 24C11.209 24 13 22.209 13 20C13 18 7 14 7 14Z"
-    fill="#1e40af"
-    opacity="0.85"
-  />
+ 
+        <path
+          d="M26 20C26 20 20 30 20 36C20 40.4183 23.5817 44 28 44C32.4183 44 36 40.4183 36 36C36 30 26 20 26 20Z"
+          fill="#1e40af"
+        />
+   
+        <path
+          d="M22 46C22 46 18 54 18 58C18 61.3137 20.6863 64 24 64C27.3137 64 30 61.3137 30 58C30 54 22 46 22 46Z"
+          fill="#1e40af"
+          opacity="0.85"
+        />
+      </g>
 
-  {/* Right droplet */}
-  <path
-    d="M25 14C25 14 23 18 23 20C23 22.209 24.791 24 27 24C29.209 24 31 22.209 31 20C31 18 25 14 25 14Z"
-    fill="#1e40af"
-    opacity="0.85"
-  />
-</svg>
+      <path d="M30 38H50V42H43V58H37V42H30V38Z" fill="red" opacity="0.95" />
+    </svg>
