@@ -1,3 +1,4 @@
+// next.config.mjs - Production optimization settings
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
@@ -12,10 +13,13 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    minimumCacheTTL: 31536000, // 1 year for image cache
   },
   compress: true,
   reactStrictMode: true,
   poweredByHeader: false,
+  productionBrowserSourceMaps: false, // Disable source maps in production
+  swcMinify: true,
   headers: async () => {
     return [
       {
@@ -56,10 +60,27 @@ const nextConfig = {
           },
         ],
       },
+      // Cache static assets
+      {
+        source: '/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
   redirects: async () => {
-    return [];
+    return [
+      // Redirect old URLs to new ones if needed
+      // {
+      //   source: '/old-page',
+      //   destination: '/new-page',
+      //   permanent: true,
+      // },
+    ];
   },
 }
 

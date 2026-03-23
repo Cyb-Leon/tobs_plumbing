@@ -1,0 +1,25 @@
+import { MetadataRoute } from 'next'
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/private/', '/_next/', '*.json$'],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+      },
+    ],
+    sitemap: [
+      'https://tobsplumbingandprojects.co.za/sitemap.xml',
+      'https://www.tobsplumbingandprojects.co.za/sitemap.xml',
+    ],
+  }
+}
